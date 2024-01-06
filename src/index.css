@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+.btn {
+  @apply bg-orange-500 py-2 px-10 text-white rounded-lg hover:bg-orange-400;
+}
+.icon{
+  @apply text-orange-500 bg-white shadow-lg p-5 rounded m-1 text-2xl
+}
