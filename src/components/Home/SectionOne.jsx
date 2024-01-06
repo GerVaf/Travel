@@ -5,14 +5,14 @@ import travel2 from "../../assets/travel2.svg";
 
 const SectionOne = () => {
   return (
-    <div className="w-full flex sm:flex-row flex-col my-20">
-      <div className="sm:w-2/4 ">
+    <div className="w-full flex xl:flex-row flex-col my-20">
+      <div className="xl:w-2/4 ">
         <div className="w-full h-full">
           <img src={travel2} alt="" />
         </div>
       </div>
 
-      <div className="sm:w-2/4 flex flex-col justify-start text-center gap-10">
+      <div className="xl:w-2/4 flex flex-col justify-start text-center gap-10">
         <h1 className="text-3xl font-bold">
           Explore all corners of the world with us
         </h1>

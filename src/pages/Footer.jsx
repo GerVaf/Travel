@@ -10,7 +10,7 @@ const Footer = () => {
         <h1 className="text-2xl font-bold">Sing up to our newsletter</h1>
         <div className="flex shadow-md rounded-lg">
           <input
-            className="p-3 rounded-l-lg sm:w-[450px] border outline-none"
+            className="p-3 rounded-l-lg lg:w-[450px] border outline-none"
             type="text"
           />
           <button className="p-3 rounded-r-lg w-[100px] bg-blue-500 text-white">
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
       </div>
       {/* footer  */}
-      <div className="flex sm:flex-row flex-col gap-5 sm:gap-0 justify-around">
+      <div className="flex lg:flex-row flex-col gap-5 lg:gap-0 justify-around">
         <div className="flex flex-col gap-5">
           <div className="text-lg font-bold mb-2">
             <p>Touro</p>

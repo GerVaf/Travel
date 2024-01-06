@@ -139,10 +139,10 @@ const Popular = () => {
   return (
     <div className="w-full">
       {/* title and cate  */}
-      <div className="flex sm:flex-row flex-col gap-5 justify-between items-center">
-        <h1 className="sm:text-4xl text-xl font-bold">Popular Place</h1>
+      <div className="flex lg:flex-row flex-col gap-5 justify-between items-center">
+        <h1 className="lg:text-4xl text-xl font-bold">Popular Place</h1>
         {/* cate info  */}
-        <div className=" shadow py-2 flex sm:flex-row justify-around sm:w-2/5 w-full font-semibold text-[10px] sm:text-lg">
+        <div className=" shadow py-2 flex lg:flex-row justify-around lg:w-2/5 w-full font-semibold text-[10px] lg:text-lg">
           {categories.map((cate) => (
             <span
               key={cate.id}
@@ -162,17 +162,17 @@ const Popular = () => {
         </div>
       </div>
       {/* change pic base on cate  */}
-      <div className="flex w-full h-[45vh] sm:h-full my-10 gap-5 sm:overflow-hidden overflow-x-scroll">
+      <div className="flex w-full h-[45vh] lg:h-full my-10 gap-5 lg:overflow-hidden overflow-x-scroll">
         {getActiveCategoryData().map((item) => (
           <motion.div
-            className=" h-full sm:h-[400px] sm:w-1/3 p-2 border rounded-lg shadow-lg"
+            className=" h-full lg:h-[400px] lg:w-1/3 p-2 border rounded-lg shadow-lg"
             key={item.id}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="h-full w-[250px] sm:w-full sm:h-full">
+            <div className="h-full w-[250px] lg:w-full lg:h-full">
               <img
                 className="w-full h-3/4 object-cover rounded-lg"
                 src={item.url}
@@ -180,15 +180,15 @@ const Popular = () => {
               />
               <div className="flex justify-between p-5">
                 <div className="flex flex-col items-center">
-                  <p className="font-bold text-[10px] sm:text-base">
+                  <p className="font-bold text-[10px] lg:text-base">
                     {item.name}
                   </p>
-                  <p className="flex items-center text-[10px] sm:text-base">
+                  <p className="flex items-center text-[10px] lg:text-base">
                     <IoLocationOutline className="text-blue-500 text-lg" />
                     {item.location}
                   </p>
                 </div>
-                <span className="text-orange-500 text-ba flex items-center gap-2 text-[10px] sm:text-base">
+                <span className="text-orange-500 text-ba flex items-center gap-2 text-[10px] lg:text-base">
                   <FaStar />
                   {item.rating}
                 </span>

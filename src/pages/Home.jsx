@@ -10,7 +10,7 @@ import Gallery from "../components/Home/Gallery";
 const Home = () => {
   return (
     <div className="flex justify-center h-[500vh]">
-      <div className="sm:w-[80%] w-[95%] flex flex-col items-center">
+      <div className="lg:w-[80%] w-[95%] flex flex-col items-center">
         <Hero />
         <Popular />
         <SectionOne />

@@ -31,10 +31,10 @@ const Nav = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="flex w-full px-5 justify-between sm:justify-around h-[10vh] items-center font-bold shadow-md">
+    <div className="flex mb-5 w-full px-5 justify-between xl:justify-around h-[10vh] items-center font-bold shadow-md">
       <div>LOGO</div>
       {/* nav item */}
-      <div className={`w-1/3 sm:flex justify-around hidden`}>
+      <div className={`w-1/3 xl:flex justify-around hidden`}>
         {navData?.map((nav) => {
           return (
             <NavLink className={`overflow-hidden`} key={nav?.id} to={nav?.path}>
@@ -54,7 +54,7 @@ const Nav = () => {
       {/* for Mobile  */}
       <div
         onClick={() => setShow(!show)}
-        className="sm:hidden text-2xl bg-slate-400 text-white rounded-full p-2"
+        className="xl:hidden text-2xl bg-slate-400 text-white rounded-full p-2"
       >
         {show ? (
           <motion.div

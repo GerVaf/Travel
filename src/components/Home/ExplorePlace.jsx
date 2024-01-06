@@ -223,10 +223,10 @@ const ExplorePlace = () => {
   return (
     <div className="w-full">
       {/* title and cate  */}
-      <div className="flex sm:flex-row flex-col justify-between items-center gap-5">
-        <h1 className="text-2xl sm:text-4xl font-bold">Explore Place</h1>
+      <div className="flex xl:flex-row flex-col justify-between items-center gap-5">
+        <h1 className="text-2xl xl:text-4xl font-bold">Explore Place</h1>
         {/* cate info  */}
-        <div className="flex justify-around w-full sm:w-2/5 font-semibold text-[10px] sm:text-lg">
+        <div className="flex justify-around w-full xl:w-2/5 font-semibold text-[10px] xl:text-xl">
           {categories.map((cate) => (
             <span
               key={cate.id}
@@ -247,7 +247,7 @@ const ExplorePlace = () => {
       </div>
       {/* change pic base on cate  */}
       <AnimatePresence>
-        <div className=" grid grid-cols-1 sm:grid-cols-3 w-full my-10 gap-5 ">
+        <div className=" grid grid-cols-1 xl:grid-cols-3 w-full my-10 gap-5 ">
           {getActiveCategoryData().map((item) => (
             <motion.div
               key={item.id}
@@ -255,10 +255,10 @@ const ExplorePlace = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="h-[400px] col-span-1 p-2 border rounded-lg shadow-lg"
+              className="h-[400px] col-span-1 p-2 border rounded-xl shadow-xl"
             >
               <img
-                className=" w-full h-3/4 object-cover rounded-lg"
+                className=" w-full h-3/4 object-cover rounded-xl"
                 src={item.url}
                 alt={item.title}
               />
@@ -266,7 +266,7 @@ const ExplorePlace = () => {
                 <div className="flex flex-col items-center">
                   <p className="font-bold">{item.name}</p>
                   <p className="flex items-center">
-                    <IoLocationOutline className="text-blue-500 text-lg" />
+                    <IoLocationOutline className="text-blue-500 text-xl" />
                     {item.location}
                   </p>
                 </div>

@@ -11,10 +11,10 @@ const Count = () => {
         onEnter={() => setCount(true)}
         onExit={() => setCount(false)}
       >
-        <div className=" grid grid-cols-2 gap-5 sm:gap-0 sm:grid-cols-4">
+        <div className=" grid grid-cols-2 gap-5 xl:gap-0 xl:grid-cols-4">
           <div className=" col-span-1 items-center justify-center flex flex-col  ">
-            <div className=" border shadow-lg items-center justify-center flex flex-col rounded-lg gap-4 font-bold w-[150px] h-[150px]">
-              <h1 className="sm:text-2xl text-xl text-orange-500">
+            <div className=" border shadow-xl items-center justify-center flex flex-col rounded-xl gap-4 font-bold w-[150px] h-[150px]">
+              <h1 className="xl:text-2xl text-xl text-orange-500">
                 {count && (
                   <CountUp start={0} end={24} duration={5} delay={0.5} />
                 )}
@@ -24,8 +24,8 @@ const Count = () => {
             </div>
           </div>
           <div className=" col-span-1 items-center justify-center flex flex-col  ">
-            <div className=" border shadow-lg items-center justify-center flex flex-col rounded-lg gap-4 font-bold w-[150px] h-[150px]">
-              <h1 className="sm:text-2xl text-xl text-orange-500">
+            <div className=" border shadow-xl items-center justify-center flex flex-col rounded-xl gap-4 font-bold w-[150px] h-[150px]">
+              <h1 className="xl:text-2xl text-xl text-orange-500">
                 {count && (
                   <CountUp start={0} end={700} duration={5} delay={0.5} />
                 )}
@@ -35,8 +35,8 @@ const Count = () => {
             </div>
           </div>
           <div className=" col-span-1 items-center justify-center flex flex-col  ">
-            <div className=" border shadow-lg items-center justify-center flex flex-col rounded-lg gap-4 font-bold w-[150px] h-[150px]">
-              <h1 className="sm:text-2xl text-xl text-orange-500">
+            <div className=" border shadow-xl items-center justify-center flex flex-col rounded-xl gap-4 font-bold w-[150px] h-[150px]">
+              <h1 className="xl:text-2xl text-xl text-orange-500">
                 {count && (
                   <CountUp start={0} end={200} duration={5} delay={0.5} />
                 )}
@@ -46,8 +46,8 @@ const Count = () => {
             </div>
           </div>
           <div className=" col-span-1 items-center justify-center flex flex-col  ">
-            <div className=" border shadow-lg items-center justify-center flex flex-col rounded-lg gap-4 font-bold w-[150px] h-[150px]">
-              <h1 className="sm:text-2xl text-xl text-orange-500">
+            <div className=" border shadow-xl items-center justify-center flex flex-col rounded-xl gap-4 font-bold w-[150px] h-[150px]">
+              <h1 className="xl:text-2xl text-xl text-orange-500">
                 {count && (
                   <CountUp start={0} end={2} duration={5} delay={0.5} />
                 )}
