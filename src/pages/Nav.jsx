@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 const Nav = () => {
   const navData = [
     {
@@ -27,19 +28,16 @@ const Nav = () => {
   ];
 
   const loc = useLocation();
+  const [show, setShow] = useState(false);
 
   return (
-    <div className="flex w-full justify-around h-[10vh] items-center font-bold shadow-md">
+    <div className="flex w-full px-5 justify-between sm:justify-around h-[10vh] items-center font-bold shadow-md">
       <div>LOGO</div>
       {/* nav item */}
-      <div className={`w-1/3 flex justify-around`}>
+      <div className={`w-1/3 sm:flex justify-around hidden`}>
         {navData?.map((nav) => {
           return (
-            <NavLink
-              className={`overflow-hidden`}
-              key={nav?.id}
-              to={nav?.path}
-            >
+            <NavLink className={`overflow-hidden`} key={nav?.id} to={nav?.path}>
               {nav?.title}
               <motion.hr
                 initial={{ scaleX: 0 }}
@@ -51,7 +49,50 @@ const Nav = () => {
           );
         })}
       </div>
-      <button className="btn">Login</button>
+      <button className="btn hidden">Login</button>
+
+      {/* for Mobile  */}
+      <div
+        onClick={() => setShow(!show)}
+        className="sm:hidden text-2xl bg-slate-400 text-white rounded-full p-2"
+      >
+        {show ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <IoClose />
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <RxHamburgerMenu />
+          </motion.div>
+        )}
+      </div>
+
+      {show && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col w-[100px] z-10 gap-2 text-center font-normal bg-white rounded absolute right-2 top-[11vh]"
+        >
+          {navData?.map((el) => {
+            return (
+              <div key={el.title}>
+                <NavLink onClick={() => setShow(!show)} to={el.path}>
+                  {el.title}
+                </NavLink>
+              </div>
+            );
+          })}
+        </motion.div>
+      )}
     </div>
   );
 };

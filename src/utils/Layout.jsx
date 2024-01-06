@@ -4,7 +4,7 @@ import Nav from "../pages/Nav";
 const Layout = ({ children }) => {
   return (
     <div>
-      {/* <Nav /> */}
+      <Nav />
       {children}
     </div>
   );
