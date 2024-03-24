@@ -1,4 +1,3 @@
-import React from "react";
 import { FaTwitter, FaFacebook, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
@@ -60,7 +59,7 @@ const Footer = () => {
           <h1 className="text-lg font-bold mb-2">Contact Us</h1>
           <span className="flex items-center gap-2">
             <CiLocationOn className="text-orange-500" />
-            Tamwe, Kamahtan Street, Myit Thar Nyount
+            Tamwe, Myit Thar Nyount
           </span>
           <span className="flex items-center gap-2">
             <FaPhoneAlt className="text-orange-500" />
@@ -74,7 +73,8 @@ const Footer = () => {
       </div>
       {/* Copyright  */}
       <div className="border-t my-5 py-5 flex gap-3 justify-center">
-        Copyright &copy; <span className="text-orange-500">code2lab.com</span>
+        Copyright &copy;
+        {/* <span className="text-orange-500">code2lab.com</span> */}
         by ThantZinMin
       </div>
     </div>
